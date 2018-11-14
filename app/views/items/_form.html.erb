@@ -1,0 +1,18 @@
+<h1><%= @item.id ? "Change Item" : "What Item Would You Like?" %></h1>
+
+<hr /> 
+
+<%= form_for [@department, @item] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocus: true, placeholder: "Item" %>
+
+  <br />
+
+  <%= f.label :price %>
+  <%= f.text_field :price, required: true, placeholder: "PRICE" %>
+
+<br />
+
+<%= f.submit %>
+
+<% end %>

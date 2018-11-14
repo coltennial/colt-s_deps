@@ -1,2 +1,13 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+<h1>Select and Item to View Details</h1>
+
+<hr />
+
+<%= link_to "Retrieve an Item", new_department_item_path(@department) %>
+
+<ul>
+  <% @items.each do |t| %>
+    
+    <li><%= link_to t.name, department_item_path(@department, t) %></li>
+
+  <% end %>
+</ul>
